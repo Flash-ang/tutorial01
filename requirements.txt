@@ -1,4 +1,4 @@
 asyncio
 pyOpenSSL
-secrets
+secret
 websockets
