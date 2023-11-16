@@ -36,6 +36,8 @@ body {
 
 .action:hover {
   background-color: darkgray;
+  background-color: Gray;
+  background-color: DimGray;
   color: white;
   font-weight: 700;
 }
