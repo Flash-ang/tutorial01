@@ -7,9 +7,11 @@ function getWebSocketServer() {
     // return "wss://websockets-tutorial.herokuapp.com/";
     return "wss://tutorial01.onrender.com/";
   } else if (window.location.host === "localhost:8000") {
-    return "ws://localhost:8000/";
+    return "wss://tutorial01.onrender.com/";
+    // return "ws://localhost:8000/";
   } else {
-    throw new Error(`Unsupported host: ${window.location.host}`);
+    // throw new Error(`Unsupported host: ${window.location.host}`);
+    return "wss://tutorial01.onrender.com/";
   }
 }
 
