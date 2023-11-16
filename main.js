@@ -1,7 +1,9 @@
 import { createBoard, playMove } from "./connect4.js";
 
 function getWebSocketServer() {
-  if (window.location.host === "python-websockets.github.io") {
+  // if (window.location.host === "python-websockets.github.io") {
+  // if (window.location.host === "Flash-ang.github.io") {
+  if (window.location.host === "github.com") {
     // return "wss://websockets-tutorial.herokuapp.com/";
     return "wss://tutorial01.onrender.com/";
   } else if (window.location.host === "localhost:8000") {
@@ -87,6 +89,7 @@ window.addEventListener("DOMContentLoaded", () => {
   const board = document.querySelector(".board");
   createBoard(board);
   // Open the WebSocket connection and register event handlers.
+    console.log( getWebSocketServer() );
   const websocket = new WebSocket(getWebSocketServer());
   initGame(websocket);
   receiveMoves(board, websocket);
